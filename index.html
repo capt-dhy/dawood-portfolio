@@ -3,33 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dawood Yusuf is a software engineer and web developer building thoughtful web applications and digital experiences.">
+
+    <meta name="description" content="Dawood Yusuf is a software engineer and builder creating web applications, digital products, and practical software solutions.">
     <meta name="author" content="Dawood Yusuf">
     <meta name="robots" content="index, follow">
     <meta name="google-site-verification" content="aUl8BkCRBn2La4IChfiiYR1p2HiKeJUvq2MUcqeMceY">
     <meta name="theme-color" content="#020c1b">
+
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link rel="canonical" href="https://dawood-eta.vercel.app/">
+
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://dawood-eta.vercel.app/">
-    <meta property="og:title" content="Dawood Yusuf | Software Engineer & Web Developer">
-    <meta property="og:description" content="Explore Dawood Yusuf's work in web development, software engineering, and digital product design.">
-    <meta property="og:site_name" content="Dawood Yusuf Portfolio">
+    <meta property="og:title" content="Dawood Yusuf | Software Engineer & Builder">
+    <meta property="og:description" content="The portfolio of Dawood Yusuf — software engineer, builder, and founder of DHYTech.">
+    <meta property="og:site_name" content="Dawood Yusuf">
+
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Dawood Yusuf | Software Engineer & Web Developer">
-    <meta name="twitter:description" content="Explore Dawood Yusuf's work in web development, software engineering, and digital product design.">
-    <title>Dawood Yusuf | Software Engineer & Web Developer</title>
+    <meta name="twitter:title" content="Dawood Yusuf | Software Engineer & Builder">
+    <meta name="twitter:description" content="The portfolio of Dawood Yusuf — software engineer, builder, and founder of DHYTech.">
+
+    <title>Dawood Yusuf | Software Engineer & Builder</title>
+
     <link rel="stylesheet" href="styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
     <header id="header">
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Main navigation">
             <div class="logo">&lt;dhy /&gt;</div>
+
             <ul class="nav-links">
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -37,11 +45,12 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="hamburger">
+
+            <button class="hamburger" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
-            </div>
+            </button>
         </nav>
     </header>
 
@@ -49,14 +58,22 @@
         <section id="hero" class="hero-section">
             <div class="container hero-container">
                 <div class="hero-text">
+                    <p class="eyebrow">Software Engineer · Builder · Founder</p>
                     <h1 class="hero-title">Hi, I'm <span class="highlight">Dawood Yusuf</span></h1>
-                    <h2 class="hero-subtitle">Software Engineer & Web Developer</h2>
-                    <p class="hero-description">I build exceptional digital experiences.</p>
-                    <a href="#projects" class="cta-button">View My Work</a>
+                    <h2 class="hero-subtitle">I build software, products, and things worth shipping.</h2>
+                    <p class="hero-description">
+                        I enjoy turning ideas into working products — from the first line of code to something people can actually use.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#projects" class="cta-button">View My Work</a>
+                        <a href="#contact" class="secondary-button">Get In Touch</a>
+                    </div>
                 </div>
+
                 <div class="hero-image-wrapper">
                     <div class="hero-image">
-                        <img src="assets/profile.jpg" alt="Dawood Yusuf">
+                        <img src="assets/profile.jpg" alt="Dawood Yusuf" width="500" height="500">
                         <div class="img-overlay"></div>
                     </div>
                 </div>
@@ -66,9 +83,15 @@
         <section id="about" class="section">
             <div class="container">
                 <h2 class="section-title">About Me</h2>
+
                 <div class="about-content">
                     <div class="about-text">
-                        <p>I am a passionate developer with a strong foundation in software engineering principles. I enjoy solving complex problems and creating efficient, scalable solutions.</p>
+                        <p>
+                            I'm Dawood, a software engineer who likes building things from the ground up. I work across frontend, backend, databases, and product development, with a focus on making software that is useful rather than just impressive on paper.
+                        </p>
+                        <p>
+                            I also founded <strong>DHYTech</strong>, where I'm working toward building and shipping products of my own.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -78,36 +101,45 @@
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Tech Stack</h2>
-                    <p class="section-subtitle">Technologies I work with</p>
+                    <p class="section-subtitle">Tools and technologies I use to build.</p>
                 </div>
+
                 <div class="skills-grid">
                     <div class="skill-card">
-                        <i class="devicon-react-original colored"></i>
-                        <span>React.js</span>
+                        <i class="devicon-react-original colored" aria-hidden="true"></i>
+                        <span>React</span>
                     </div>
                     <div class="skill-card">
-                        <i class="devicon-react-original colored"></i>
-                        <span>React Native</span>
+                        <i class="devicon-nextjs-plain" aria-hidden="true"></i>
+                        <span>Next.js</span>
                     </div>
                     <div class="skill-card">
-                        <i class="devicon-php-plain colored"></i>
-                        <span>PHP</span>
+                        <i class="devicon-typescript-plain colored" aria-hidden="true"></i>
+                        <span>TypeScript</span>
                     </div>
                     <div class="skill-card">
-                        <i class="devicon-laravel-original colored"></i>
-                        <span>Laravel</span>
-                    </div>
-                    <div class="skill-card">
-                        <i class="devicon-nodejs-plain colored"></i>
+                        <i class="devicon-nodejs-plain colored" aria-hidden="true"></i>
                         <span>Node.js</span>
                     </div>
                     <div class="skill-card">
-                        <i class="devicon-mysql-original colored"></i>
+                        <i class="devicon-php-plain colored" aria-hidden="true"></i>
+                        <span>PHP</span>
+                    </div>
+                    <div class="skill-card">
+                        <i class="devicon-laravel-original colored" aria-hidden="true"></i>
+                        <span>Laravel</span>
+                    </div>
+                    <div class="skill-card">
+                        <i class="devicon-mongodb-plain colored" aria-hidden="true"></i>
+                        <span>MongoDB</span>
+                    </div>
+                    <div class="skill-card">
+                        <i class="devicon-mysql-original colored" aria-hidden="true"></i>
                         <span>MySQL</span>
                     </div>
                     <div class="skill-card">
-                        <i class="devicon-git-plain colored"></i>
-                        <span>git & github</span>
+                        <i class="devicon-git-plain colored" aria-hidden="true"></i>
+                        <span>Git & GitHub</span>
                     </div>
                 </div>
             </div>
@@ -115,19 +147,19 @@
 
         <section id="projects" class="section">
             <div class="container">
-                 <div class="section-header">
-                    <h2 class="section-title">Featured Projects</h2>
-                    <p class="section-subtitle">Some of my recent work</p>
+                <div class="section-header">
+                    <h2 class="section-title">Selected Work</h2>
+                    <p class="section-subtitle">A selection of projects I've built and worked on.</p>
                 </div>
+
                 <div class="projects-grid">
-                    <!-- Project 1 -->
                     <div class="project-card">
                         <div class="project-image">
                             <iframe src="https://flexi-meet.vercel.app/" title="FlexiMeet project preview" loading="lazy"></iframe>
                         </div>
                         <div class="project-content">
                             <h3>FlexiMeet</h3>
-                            <p>A scheduling app for coordinating meetings, managing availability, and connecting leads with participants.</p>
+                            <p>A scheduling platform for managing availability, coordinating meetings, and connecting participants.</p>
                             <div class="project-tags">
                                 <span>React</span>
                                 <span>Laravel</span>
@@ -135,32 +167,30 @@
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Project 2 -->
+
                     <div class="project-card">
-                         <div class="project-image">
+                        <div class="project-image">
                             <iframe src="https://lead-iqx.vercel.app/" title="LeadIQX project preview" loading="lazy"></iframe>
                         </div>
                         <div class="project-content">
                             <h3>LeadIQX</h3>
-                            <p>An AI-powered market intelligence platform for monitoring competitors and tracking website changes.</p>
+                            <p>An AI-powered market intelligence product for monitoring competitors, tracking changes, and turning web signals into useful insights.</p>
                             <div class="project-tags">
-                                <span>React</span>
+                                <span>Next.js</span>
                                 <span>Node.js</span>
                                 <span>MongoDB</span>
-                                <span>Gemini</span>
+                                <span>AI</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Project 3 -->
                     <div class="project-card">
-                         <div class="project-image">
+                        <div class="project-image">
                             <iframe src="https://mahdiya-seven.vercel.app/" title="Mahdiya project preview" loading="lazy"></iframe>
                         </div>
                         <div class="project-content">
                             <h3>Mahdiya</h3>
-                            <p>A website that showcases the beauty of Mahdiya.</p>
+                            <p>A visual web experience built to showcase Mahdiya through a focused, modern interface.</p>
                             <div class="project-tags">
                                 <span>React</span>
                                 <span>CSS</span>
@@ -168,31 +198,28 @@
                         </div>
                     </div>
 
-                    <!-- Project 4 -->
                     <div class="project-card">
                         <div class="project-image">
                             <iframe src="https://imk-kappa.vercel.app/" title="IMK Studio project preview" loading="lazy"></iframe>
                         </div>
                         <div class="project-content">
                             <h3>IMK Studio</h3>
-                            <p>A creative studio website for branding, design, and development work.</p>
+                            <p>A creative studio website built around branding, design, and digital development.</p>
                             <div class="project-tags">
                                 <span>React</span>
                                 <span>Laravel</span>
                                 <span>Supabase</span>
-                                <span>CSS</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Project 5 -->
                     <div class="project-card">
                         <div class="project-image">
                             <iframe src="https://itachi-uchiha-six.vercel.app/" title="Itachi Uchiha project preview" loading="lazy"></iframe>
                         </div>
                         <div class="project-content">
                             <h3>Itachi Uchiha</h3>
-                            <p>A showcase website dedicated to one of Naruto's most iconic characters.</p>
+                            <p>A themed showcase website built around one of Naruto's most iconic characters.</p>
                             <div class="project-tags">
                                 <span>React</span>
                                 <span>CSS</span>
@@ -200,53 +227,47 @@
                         </div>
                     </div>
 
-                    <!-- Project 6 -->
                     <div class="project-card">
                         <div class="project-image">
                             <iframe src="https://hannatu.vercel.app/" title="Hijirah Pharmacy and Store project preview" loading="lazy"></iframe>
                         </div>
                         <div class="project-content">
-                            <h3>Hijirah Pharmacy and Store</h3>
+                            <h3>Hijirah Pharmacy & Store</h3>
                             <p>A modern e-commerce experience for a pharmacy and retail store.</p>
                             <div class="project-tags">
                                 <span>React</span>
                                 <span>Laravel</span>
-                                <span>Bootstrap</span>
                                 <span>MySQL</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Project 7 -->
                     <div class="project-card">
                         <div class="project-image">
                             <iframe src="https://www.edulive.com.ng/" title="Edu-live project preview" loading="lazy"></iframe>
                         </div>
                         <div class="project-content">
                             <h3>Edu-live</h3>
-                            <p>An educational platform for accessible online learning.</p>
+                            <p>An educational platform focused on making online learning more accessible.</p>
                             <div class="project-tags">
                                 <span>React</span>
                                 <span>Node.js</span>
-                                <span>Tailwind CSS</span>
                                 <span>MongoDB</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Project 8 -->
                     <div class="project-card">
                         <div class="project-image">
                             <iframe src="https://ummahcoop.com.ng/" title="Ummahcoop project preview" loading="lazy"></iframe>
                         </div>
                         <div class="project-content">
                             <h3>Ummahcoop</h3>
-                            <p>A cooperative platform designed to serve its community.</p>
+                            <p>A community cooperative platform for managing members, contributions, and financial activity.</p>
                             <div class="project-tags">
-                                <span>React</span>
-                                <span>Node.js</span>
-                                <span>Tailwind CSS</span>
-                                <span>MongoDB</span>
+                                <span>Laravel</span>
+                                <span>PHP</span>
+                                <span>MySQL</span>
                             </div>
                         </div>
                     </div>
@@ -256,34 +277,36 @@
 
         <section id="contact" class="section">
             <div class="container">
-                <h2 class="section-title">Get In Touch</h2>
-                <p>I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
-                
+                <h2 class="section-title">Let's Talk</h2>
+                <p>
+                    Have a project, opportunity, or idea worth discussing? Send me a message.
+                </p>
+
                 <div class="contact-icons-grid">
                     <div class="contact-item">
-                        <a href="mailto:dhydevops@gmail.com" class="icon-box" aria-label="Email">
-                            <i class="fas fa-envelope"></i>
+                        <a href="mailto:dhydevops@gmail.com" class="icon-box" aria-label="Email Dawood">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
                         </a>
                         <span class="icon-label">Email</span>
                     </div>
 
                     <div class="contact-item">
-                        <a href="tel:+23408107488244" class="icon-box" aria-label="Phone">
-                            <i class="fas fa-phone"></i>
+                        <a href="tel:+23408107488244" class="icon-box" aria-label="Call Dawood">
+                            <i class="fas fa-phone" aria-hidden="true"></i>
                         </a>
                         <span class="icon-label">Phone</span>
                     </div>
 
                     <div class="contact-item">
-                        <a href="https://github.com/capt-dhy/" target="_blank" class="icon-box" aria-label="GitHub">
-                            <i class="devicon-github-original"></i>
+                        <a href="https://github.com/capt-dhy/" target="_blank" rel="noopener noreferrer" class="icon-box" aria-label="Dawood on GitHub">
+                            <i class="devicon-github-original" aria-hidden="true"></i>
                         </a>
                         <span class="icon-label">GitHub</span>
                     </div>
 
                     <div class="contact-item">
-                        <a href="https://www.linkedin.com/in/dawood-hassan-882b26340" target="_blank" class="icon-box" aria-label="LinkedIn">
-                            <i class="devicon-linkedin-plain"></i>
+                        <a href="https://www.linkedin.com/in/dawood-hassan-882b26340" target="_blank" rel="noopener noreferrer" class="icon-box" aria-label="Dawood on LinkedIn">
+                            <i class="devicon-linkedin-plain" aria-hidden="true"></i>
                         </a>
                         <span class="icon-label">LinkedIn</span>
                     </div>
@@ -296,7 +319,7 @@
 
     <footer id="footer">
         <div class="container">
-            <p>&copy; 2024 Dawood Yusuf. All rights reserved.</p>
+            <p>&copy; 2026 Dawood Yusuf. All rights reserved.</p>
         </div>
     </footer>
 
