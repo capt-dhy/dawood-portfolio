@@ -1,52 +1,74 @@
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("Portfolio site loaded successfully.");
-
-  // Mobile Menu Toggle
   const hamburger = document.querySelector(".hamburger");
   const navLinks = document.querySelector(".nav-links");
 
+  // Mobile navigation
   if (hamburger && navLinks) {
+    const closeMenu = () => {
+      hamburger.classList.remove("active");
+      navLinks.classList.remove("active");
+      hamburger.setAttribute("aria-expanded", "false");
+    };
+
     hamburger.addEventListener("click", () => {
-      hamburger.classList.toggle("active");
-      navLinks.classList.toggle("active");
+      const isOpen = hamburger.classList.toggle("active");
+      navLinks.classList.toggle("active", isOpen);
+      hamburger.setAttribute("aria-expanded", String(isOpen));
     });
 
-    // Close menu when a link is clicked
-    document.querySelectorAll(".nav-links li a").forEach((link) => {
-      link.addEventListener("click", () => {
-        hamburger.classList.remove("active");
-        navLinks.classList.remove("active");
-      });
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeMenu);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closeMenu();
+      }
     });
   }
 
-  // Smooth scrolling for anchor links
+  // Smooth scrolling for internal links
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener("click", function (e) {
-      e.preventDefault();
+    anchor.addEventListener("click", (event) => {
+      const targetId = anchor.getAttribute("href");
+      const target = targetId ? document.querySelector(targetId) : null;
 
-      document.querySelector(this.getAttribute("href")).scrollIntoView({
+      if (!target) return;
+
+      event.preventDefault();
+      target.scrollIntoView({
         behavior: "smooth",
+        block: "start",
       });
     });
   });
 
-  // Intersection Observer for fade-in animations
-  const observerOptions = {
-    threshold: 0.1,
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-      }
-    });
-  }, observerOptions);
-
+  // Reveal sections as they enter the viewport
   const sections = document.querySelectorAll(".section");
-  sections.forEach((section) => {
-    section.classList.add("fade-in"); // Check CSS for fade-in class
-    observer.observe(section);
-  });
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+      (entries, observerInstance) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+
+          entry.target.classList.add("visible");
+          observerInstance.unobserve(entry.target);
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: "0px 0px -40px 0px",
+      }
+    );
+
+    sections.forEach((section) => {
+      section.classList.add("fade-in");
+      observer.observe(section);
+    });
+  } else {
+    sections.forEach((section) => {
+      section.classList.add("visible");
+    });
+  }
 });
